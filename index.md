@@ -55,13 +55,12 @@ Inputs to these files can be strings, plaintext files, or gzipped files
 - Root 
 - Node 
 ## Types of Trees 
-## Making a tree in Python using Bio.pylo
+## Making a tree in Python using Bio.pylo ##
 
-`import Bio as bio
-from Bio import Phylo
-baleen = Phylo.read("baleen2.tre", "newick")
-#print(baleen)
-Phylo.draw(baleen)`
+`import Bio as bio`
+`from Bio import Phylo`
+`baleen = Phylo.read("baleen2.tre", "newick")`
+`Phylo.draw(baleen)`
 ---
 # 4. Run statistical analyses
 ## Statistics 
