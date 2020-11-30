@@ -1,10 +1,11 @@
 title: A Tutorial for Phylogenetic Analyses in Jupyter Notebook
 logo: "/images/joker_logo.jpg?raw=true" # your photo (or logo) here
-description: > #text below
-Created by Taylor Lindsay, December 2020
-taylor_lindsay@uri.edu
-
-This tutorial will walk you through the steps of creating a phylogenetic tree using Jupyter Notebook, with Python as a programing language. These concepts can be utilized at the command line, however this tutorial is intended to be introductory, and is better visualized and conceptualized n Jupyter Notebook. 
+description: > # your text below (remove <br> elements if you don't need line breaks)
+  ### Steps to creating phylogenetic trees 
+  1. Download sequence data
+  2. Align sequence data
+  3. Create Phylogenetic Tree
+  4. Run statistical analyses 
 
 ### Steps to creating phylogenetic trees 
 
