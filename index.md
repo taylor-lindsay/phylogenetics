@@ -62,8 +62,11 @@ Inputs to these files can be strings, plaintext files, or gzipped files
 ## Making a tree in Python using Bio.pylo ##
 
 `import Bio as bio`
+
 `from Bio import Phylo`
+
 `baleen = Phylo.read("baleen2.tre", "newick")`
+
 `Phylo.draw(baleen)`
 
 ---
