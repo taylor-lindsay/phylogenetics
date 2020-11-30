@@ -4,11 +4,11 @@ description: > # your text below (remove <br> elements if you don't need line br
   ### Steps to creating phylogenetic trees   
   <br><br>
   1. Download sequence data
-    <br><br>
+    <br>
   2. Align sequence data
-    <br><br>
+    <br>
   3. Create Phylogenetic Tree
-    <br><br>
+    <br>
   4. Run statistical analyses 
 
 theme: jekyll-theme-minimal
