@@ -93,6 +93,7 @@ Inputs to these files can be strings, plaintext files, or gzipped files
 4. https://towardsdatascience.com/introduction-to-sequence-alignments-with-biopython-f3b6375095db
 5. https://biopython.org/wiki/Phylo_cookbook
 6. https://tree.opentreeoflife.org/opentree/opentree12.3@mrcaott800329ott800331/Balaenoptera-borealis--Balaenoptera-brydei
+7. https://github.com/peterjc/biopython_workshop/blob/master/reading_writing_alignments/README.rst
 
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
