@@ -30,10 +30,10 @@ ORIGIN
 
 ### Downloading pre-made trees
 If you are doing a simple analysis, you may wish to skip the sequence allignment process, and simply use trees that are already published in the scientific community. To do this, you can download one of the file types discussed in the "Tree file formats and uploading data" section below. This type of data can be downloaded from websites such as the following: 
-1. (https://itol.embl.de/)
-2. [Open tree of life](https://tree.opentreeoflife.org/)
+1. [Interactive Tree of Life](https://itol.embl.de/)
+2. [Open Tree of Life](https://tree.opentreeoflife.org/)
 3. [Treebase](https://www.treebase.org/)
-4. [Phylomed](http://phylomedb.org/)
+4. [Phylome DB](http://phylomedb.org/)
 ---
 # 2. Aligning Sequence Data 
 There are currently multiple packages that allow users to work with sequence data and create phylogenetic trees 
