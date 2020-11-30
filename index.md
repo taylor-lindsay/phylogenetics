@@ -56,6 +56,7 @@ Inputs to these files can be strings, plaintext files, or gzipped files
 - Node 
 ## Types of Trees 
 ## Making a tree in Python using Bio.pylo
+
 `import Bio as bio
 from Bio import Phylo
 baleen = Phylo.read("baleen2.tre", "newick")
@@ -64,13 +65,12 @@ Phylo.draw(baleen)`
 ---
 # 4. Run statistical analyses
 ## Statistics 
-
-### tree height
-### average branch length
-### patristic distances between nodes 
-### treeness 
-### Gamma statistic 
-### Lineages through time plot 
+- tree height
+- average branch length
+- patristic distances between nodes 
+- treeness 
+- Gamma statistic 
+- Lineages through time plot 
 
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
