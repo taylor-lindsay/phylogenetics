@@ -1,15 +1,9 @@
 title: A Tutorial for Phylogenetic Analyses in Python
 logo: "/images/animal_tree.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  Steps to creating phylogenetic trees:
-  <br>
-  1. Download sequence data
-    <br>
-  2. Align sequence data
-    <br>
-  3. Create Phylogenetic Tree
-    <br>
-  4. Run statistical analyses 
+ Created by Taylor Lindsay, December 2020
+ <br>
+  Contact: taylor_lindsay@uri.edu
 
 theme: jekyll-theme-minimal
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here
