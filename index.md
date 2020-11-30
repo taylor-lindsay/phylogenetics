@@ -34,13 +34,16 @@ If you are doing a simple analysis, you may wish to skip the sequence allignment
 2. [Open Tree of Life](https://tree.opentreeoflife.org/)
 3. [Treebase](https://www.treebase.org/)
 4. [Phylome DB](http://phylomedb.org/)
+
 ---
+
 # 2. Aligning Sequence Data 
 There are currently multiple packages that allow users to work with sequence data and create phylogenetic trees 
 - **Bio.Phylo:** For this tutorial, we will use BioPhylo 
 - **TreeSwift:** The newest of these packages, Treeswift is designed to handle large datasets much more quickly than the others. Treeswift 
 - **DendroPy:**
 - **ETE Toolkit:**
+
 ---
 
 # 3. Create Phylogenetic Tree
@@ -70,6 +73,7 @@ Inputs to these files can be strings, plaintext files, or gzipped files
 `Phylo.draw(baleen)`
 
 ---
+
 # 4. Run statistical analyses
 
 ## Statistics 
@@ -79,6 +83,11 @@ Inputs to these files can be strings, plaintext files, or gzipped files
 - treeness 
 - Gamma statistic 
 - Lineages through time plot 
+
+---
+
+# Sources
+1. [Tree of life](https://www.researchgate.net/figure/Phylogenetic-tree-of-the-Animal-kingdom-2_fig1_314095464)
 
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
