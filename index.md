@@ -1,9 +1,9 @@
 This tutorial will walk you through the steps of creating a phylogenetic tree using Jupyter Notebook, with Python as a programing language. These concepts can be utilized at the command line, however this tutorial is intended to be introductory, and is better visualized and conceptualized in Jupyter Notebook. 
 ### Steps to creating phylogenetic trees 
-1. Download sequence data
-2. Align sequence data
+1. Download Sequence Data
+2. Align Sequence Data
 3. Create Phylogenetic Tree
-4. Run statistical analyses 
+4. Run Statistical Analyses 
 
 # 1. Downloading Sequence Data 
 The most common place to download sequence data is from GenBank (https://www.ncbi.nlm.nih.gov/genbank/), a federally funded database with all publically available partial or whole genome sequences. To download data from this website, you must first determine the following details for your analysis:
