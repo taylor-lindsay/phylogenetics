@@ -26,14 +26,14 @@ ORIGIN
        61 caggaaagtg atacaaaggt ggccatcaag aaactagccc gtccgttcca gacagccata
 ...`
 
-- Other popular data formats can be found here (http://emboss.sourceforge.net/docs/themes/SequenceFormats.html). 
+- Other popular data formats can be found [here](http://emboss.sourceforge.net/docs/themes/SequenceFormats.html). 
 
 ### Downloading pre-made trees
 If you are doing a simple analysis, you may wish to skip the sequence allignment process, and simply use trees that are already published in the scientific community. To do this, you can download one of the file types discussed in the "Tree file formats and uploading data" section below. This type of data can be downloaded from websites such as the following: 
-1. https://itol.embl.de/
-2. https://tree.opentreeoflife.org/
-3. https://www.treebase.org/
-4. http://phylomedb.org/ 
+1. (https://itol.embl.de/)
+2. [Open tree of life](https://tree.opentreeoflife.org/)
+3. [Treebase](https://www.treebase.org/)
+4. [Phylomed](http://phylomedb.org/)
 ---
 # 2. Aligning Sequence Data 
 There are currently multiple packages that allow users to work with sequence data and create phylogenetic trees 
