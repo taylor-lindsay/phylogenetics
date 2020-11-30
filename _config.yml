@@ -1,10 +1,14 @@
 title: A Tutorial for Phylogenetic Analyses in Jupyter Notebook
 logo: "/images/joker_logo.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  ### Steps to creating phylogenetic trees 
+  ### Steps to creating phylogenetic trees   
+  <br><br>
   1. Download sequence data
+    <br><br>
   2. Align sequence data
+    <br><br>
   3. Create Phylogenetic Tree
+    <br><br>
   4. Run statistical analyses 
 
 theme: jekyll-theme-minimal
