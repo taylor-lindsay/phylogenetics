@@ -42,7 +42,9 @@ There are currently multiple packages that allow users to work with sequence dat
 - **DendroPy:**
 - **ETE Toolkit:**
 ---
+
 # 3. Create Phylogenetic Tree
+
 ## Tree file formats and uploading data
 
 Inputs to these files can be strings, plaintext files, or gzipped files 
@@ -54,15 +56,19 @@ Inputs to these files can be strings, plaintext files, or gzipped files
 ## Parts of a phylogenetic tree 
 - Root 
 - Node 
+
 ## Types of Trees 
+
 ## Making a tree in Python using Bio.pylo ##
 
 `import Bio as bio`
 `from Bio import Phylo`
 `baleen = Phylo.read("baleen2.tre", "newick")`
 `Phylo.draw(baleen)`
+
 ---
 # 4. Run statistical analyses
+
 ## Statistics 
 - tree height
 - average branch length
