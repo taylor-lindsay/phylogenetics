@@ -87,7 +87,12 @@ Inputs to these files can be strings, plaintext files, or gzipped files
 ---
 
 # Sources
-1. [Tree of life](https://www.researchgate.net/figure/Phylogenetic-tree-of-the-Animal-kingdom-2_fig1_314095464)
+1. [Tree of life image](https://www.researchgate.net/figure/Phylogenetic-tree-of-the-Animal-kingdom-2_fig1_314095464)
+2. http://emboss.sourceforge.net/docs/themes/SequenceFormats.html
+3. https://medium.com/@wvsharber/introduction-to-genbank-and-bioinformatics-with-python-8a25a0f15e3f
+4. https://towardsdatascience.com/introduction-to-sequence-alignments-with-biopython-f3b6375095db
+5. https://biopython.org/wiki/Phylo_cookbook
+6. https://tree.opentreeoflife.org/opentree/opentree12.3@mrcaott800329ott800331/Balaenoptera-borealis--Balaenoptera-brydei
 
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
