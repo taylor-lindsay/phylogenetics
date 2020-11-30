@@ -4,7 +4,7 @@ The most common place to download sequence data is from GenBank (https://www.ncb
 - What part of the genome (eg. 16s, ...)
 - What file format 
 
-The GenBank website is easily navigable once you have determined these details, and will allow you to copy and paste data into a new file, or download sequence data in many different formats. 
+The [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) website is easily navigable once you have determined these details, and will allow you to copy and paste data into a new file, or download sequence data in many different formats. 
 ### Sequence Data File Formats 
 
 - **Raw:** sequence data without any description or other information  
