@@ -29,24 +29,24 @@ The [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) website is easily navigable
 
 - **Raw:** sequence data without any description or other information  
 
-`ttcctctttctcgactccatcttcgcggtagctgggaccgccgttcagtcgc`
+        ttcctctttctcgactccatcttcgcggtagctgggaccgccgttcagtcgc
 
 - **FASTA:** The most commonly used format, and the one we will use for this tutorial, the first line of each sequence starts with `>` and includes an ID code and other information
 
-`>ID_code some other comment
-ttcctctttctcgactccatcttcgcggtagct`
+        >ID_code some other comment
+        ttcctctttctcgactccatcttcgcggtagct
 
 - **GenBank:** contains lots of detailed information about the sequence. 
 
-`LOCUS       DQ078310                1250 bp    mRNA    linear   INV 26-JUL-2016
-DEFINITION  Littorina littorea p38 MAPK mRNA, partial cds.
-ACCESSION   DQ078310
-VERSION     DQ078310.1
-...
-ORIGIN      
+        LOCUS       DQ078310                1250 bp    mRNA    linear   INV 26-JUL-2016
+        DEFINITION  Littorina littorea p38 MAPK mRNA, partial cds.
+        ACCESSION   DQ078310
+        VERSION     DQ078310.1
+        ...
+        ORIGIN      
         1 taccaaatgc tgtctcccat cggtgtagga gcttacggcc aagtcgtgtc gtcatacgac
-       61 caggaaagtg atacaaaggt ggccatcaag aaactagccc gtccgttcca gacagccata
-...`
+        61 caggaaagtg atacaaaggt ggccatcaag aaactagccc gtccgttcca gacagccata
+        ...
 
 - Other popular data formats can be found [here](http://emboss.sourceforge.net/docs/themes/SequenceFormats.html). 
 
@@ -75,29 +75,26 @@ If you are doing a simple analysis, you may wish to skip the sequence allignment
 
 The first argument is the file and the second is the format. 
 
-`s1 = SeqIO.read("sequence1.fasta", "fasta")`
-
-`s2 = SeqIO.read("sequence2.fasta", "fasta")`
+        s1 = SeqIO.read("sequence1.fasta", "fasta")
+        s2 = SeqIO.read("sequence2.fasta", "fasta")
 
 #### SeqIO.parse() reads multiple sequences from a file 
 
-`raw_fasta = SeqIO.parse("whales.fasta", "fasta")`
+        raw_fasta = SeqIO.parse("whales.fasta", "fasta")
+        print(list_fasta)`
 
-`print(list_fasta)`
+*returns
 
-*return
-
-`<Bio.SeqIO.FastaIO.FastaIterator object at 0x7ff32df77550>`
+        <Bio.SeqIO.FastaIO.FastaIterator object at 0x7ff32df77550>
 
 However, the easiest way to work with this data is to convert it into a list. From there, you can print and read the 
 
-`list_fasta = list(SeqIO.parse("whales.fasta", "fasta"))`
-
-`print(list_fasta)`
+        list_fasta = list(SeqIO.parse("whales.fasta", "fasta"))
+        print(list_fasta)
 
 *return 
 
-`[SeqRecord(seq=Seq('ACCAGCTCTAGCCCATACCCTCCACACTTCTACTACCATAAACTAATCAAATAA...CTT'), id='AP006466.1:1122-2698', name='AP006466.1:1122-2698', description='AP006466.1:1122-2698 Balaenoptera bonaerensis mitochondrial DNA, complete genome', dbxrefs=[]), SeqRecord(seq=Seq('AACCAGTATTAGAGCACTGCCTGCCCGGTGACTAATCGTTAAACGGCCGCGGTA...GTT'), id='U13103.1', name='U13103.1', description='U13103.1 Balaenoptera physalus mitochondrion 16S rRNA gene, partial sequence', dbxrefs=[]), SeqRecord(seq=Seq('ACTCCTAGCCTGACT`
+        [SeqRecord(seq=Seq('ACCAGCTCTAGCCCATACCCTCCACACTTCTACTACCATAAACTAATCAAATAA...CTT'), id='AP006466.1:1122-2698', name='AP006466.1:1122-2698',             description='AP006466.1:1122-2698 Balaenoptera bonaerensis mitochondrial DNA, complete genome', dbxrefs=[]),                            SeqRecord(seq=Seq('AACCAGTATTAGAGCACTGCCTGCCCGGTGACTAATCGTTAAACGGCCGCGGTA...GTT'), id='U13103.1', name='U13103.1', description='U13103.1 Balaenoptera   physalus mitochondrion 16S rRNA gene, partial sequence', dbxrefs=[]), SeqRecord(seq=Seq('ACTCCTAGCCTGACT`... 
 
 ---
 
