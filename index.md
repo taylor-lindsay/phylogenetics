@@ -72,7 +72,6 @@ If you are doing a simple analysis, you may wish to skip the sequence allignment
         from Bio import SeqIO
 
 #### SeqIO.read() reads a single sequence from a file. 
-
 The first argument is the file and the second is the format. 
 
         s1 = SeqIO.read("sequence1.fasta", "fasta")
@@ -83,7 +82,7 @@ The first argument is the file and the second is the format.
         raw_fasta = SeqIO.parse("whales.fasta", "fasta")
         print(list_fasta)`
 
-*returns
+returns: 
 
         <Bio.SeqIO.FastaIO.FastaIterator object at 0x7ff32df77550>
 
@@ -92,9 +91,45 @@ However, the easiest way to work with this data is to convert it into a list. Fr
         list_fasta = list(SeqIO.parse("whales.fasta", "fasta"))
         print(list_fasta)
 
-*return 
+returns a compressed list of the sequence data: 
 
-        [SeqRecord(seq=Seq('ACCAGCTCTAGCCCATACCCTCCACACTTCTACTACCATAAACTAATCAAATAA...CTT'), id='AP006466.1:1122-2698', name='AP006466.1:1122-2698',             description='AP006466.1:1122-2698 Balaenoptera bonaerensis mitochondrial DNA, complete genome', dbxrefs=[]),                            SeqRecord(seq=Seq('AACCAGTATTAGAGCACTGCCTGCCCGGTGACTAATCGTTAAACGGCCGCGGTA...GTT'), id='U13103.1', name='U13103.1', description='U13103.1 Balaenoptera   physalus mitochondrion 16S rRNA gene, partial sequence', dbxrefs=[]), SeqRecord(seq=Seq('ACTCCTAGCCTGACT`... 
+        [SeqRecord(seq=Seq('ACCAGCTCTAGCCCATACCCTCCACACTTCTACTACCATAAACTAATCAAATAA...CTT'), id='AP006466.1:1122-2698', name='AP006466.1:1122-2698',             description='AP006466.1:1122-2698 Balaenoptera bonaerensis mitochondrial DNA, complete genome', dbxrefs=[]),                            SeqRecord(seq=Seq('AACCAGTATTAGAGCACTGCCTGCCCGGTGACTAATCGTTAAACGGCCGCGGTA...GTT'), id='U13103.1', name='U13103.1', description='U13103.1 Balaenoptera   physalus mitochondrion 16S rRNA gene, partial sequence', dbxrefs=[]), SeqRecord(seq=Seq('ACTCCTAGCCTGACT... 
+       
+#### Other helpful commands for working with sequence data
+
+To print a list of all the IDs in a fasta file:
+
+        for record in SeqIO.parse("sequences.fasta", "fasta"):
+          print(record.id)
+
+        seq1
+        seq2
+        seq3
+        ...
+        
+To find out the current ID: 
+
+        print(s1.id)
+        
+To read the full description on your fasta file 
+
+        print(s1.description)
+        
+To change an ID name: 
+
+        s1.id = 'Balaenoptera acutorostrata'
+      
+      
+#### SeqIO.write() is used to write a new file from one or more existing sequences. 
+This step should also be used if the id names were edited in python and need to be saved to a file. 
+
+        SeqIO.write([s1, s2], "onetwo.fasta", "fasta")
+
+#### SeqIO.convert()
+        
+        
+        
+#### 
 
 ---
 
