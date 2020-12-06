@@ -1,15 +1,19 @@
 This tutorial will walk you through the steps of creating a phylogenetic tree using Jupyter Notebook, with Python as a programing language. These concepts can be utilized at the command line, however this tutorial is intended to be introductory, and is better visualized and conceptualized in Jupyter Notebook. 
-### Steps to creating phylogenetic trees 
-1. Download Sequence Data and working with it in python
-2. Align Sequence Data
-3. Create Phylogenetic Tree
-4. Run Statistical Analyses 
 
-There are currently multiple packages that allow users to work with sequence data and create phylogenetic trees 
-- **Bio.Phylo:** For this tutorial, we will use BioPhylo 
-- **TreeSwift:** The newest of these packages, Treeswift is designed to handle large datasets much more quickly than the others. Treeswift 
-- **DendroPy:** 
-- **ETE Toolkit:**
+There are currently multiple packages that allow users to work with sequence data and create phylogenetic trees in python: 
+- (BioPython:)[https://biopython.org/] BioPython has many modules that allow the user to work with a variety of data types including sequence data, alignment files, and tree files and has the capacity create phylogenetic tree diagrams using (matplotlib.)[https://matplotlib.org/]
+- (TreeSwift:)[https://www.sciencedirect.com/science/article/pii/S2352711019300767] The newest of these packages, Treeswift is designed to handle large tree datasets much more quickly than the others and run statistical analyses on the trees. However, it doesn't allow the user to create trees, work with sequence data, or directly edit the trees. 
+- (DendroPy:)[https://dendropy.org/] This python library also focuses on tree data, allowing users "simulate, process, and manipulate" trees. 
+- (ETE Toolkit:)[http://etetoolkit.org/] ETE provides the best framework for visualizing trees but does not support creating or editing trees. 
+
+Each of these packages have different strengths at different steps in the process of creating and visualizing a phylogenetic tree. Here, we will use BioPython because it is the only package that allows us to work through the process from initial sequence data to a simple visualization of the tree. 
+
+## Steps to creating phylogenetic trees 
+1. **Download and work with sequence data
+2. **Align sequence data and work with alignments 
+3. **Working with tree data 
+4. **Creating phylogenetic trees
+5. **Run Statistical Analyses 
 
 # 1. Downloading and Working with Sequence Data 
 The most common place to download sequence data is from GenBank (https://www.ncbi.nlm.nih.gov/genbank/), a federally funded database with all publically available partial or whole genome sequences. To download data from this website, you must first determine the following details for your analysis:
@@ -18,7 +22,7 @@ The most common place to download sequence data is from GenBank (https://www.ncb
 - What file format 
 
 The [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) website is easily navigable once you have determined these details, and will allow you to copy and paste data into a new file, or download sequence data in many different formats. 
-### Sequence Data File Formats 
+## Sequence Data File Formats 
 
 - **Raw:** sequence data without any description or other information  
 
