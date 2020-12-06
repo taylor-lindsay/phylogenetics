@@ -95,19 +95,14 @@ returns a compressed list of the sequence data:
 
         [SeqRecord(seq=Seq('ACCAGCTCTAGCCCATACCCTCCACACTTCTACTACCATAAACTAATCAAATAA...CTT'), id='AP006466.1:1122-2698', name='AP006466.1:1122-2698',             description='AP006466.1:1122-2698 Balaenoptera bonaerensis mitochondrial DNA, complete genome', dbxrefs=[]),                            SeqRecord(seq=Seq('AACCAGTATTAGAGCACTGCCTGCCCGGTGACTAATCGTTAAACGGCCGCGGTA...GTT'), id='U13103.1', name='U13103.1', description='U13103.1 Balaenoptera   physalus mitochondrion 16S rRNA gene, partial sequence', dbxrefs=[]), SeqRecord(seq=Seq('ACTCCTAGCCTGACT... 
        
-#### Other helpful commands for working with sequence data
+#### Helpful commands for reading and understanding the file
 
 To print a list of all the IDs in a fasta file:
 
         for record in SeqIO.parse("sequences.fasta", "fasta"):
           print(record.id)
-
-        seq1
-        seq2
-        seq3
-        ...
         
-To find out the current ID: 
+To find out the current ID of a sequence: 
 
         print(s1.id)
         
@@ -123,13 +118,29 @@ To change an ID name:
 #### SeqIO.write() is used to write a new file from one or more existing sequences. 
 This step should also be used if the id names were edited in python and need to be saved to a file. 
 
-        SeqIO.write([s1, s2], "onetwo.fasta", "fasta")
+        SeqIO.write([s1, s2], "sequences.fasta", "fasta")
 
-#### SeqIO.convert()
+#### SeqIO.convert() allows 
+
+        SeqIO.convert("sequence1.fasta", "fasta", "new_sequence.fastq", "fastq")
         
+#### Other functions in SeqIO that we don't need here: 
+Write a sequence by hand 
+
+        new_sequence = Seq("AAGGAACTG", generic_dna)
+
+Transcribe from DNA to RNA
         
+        transcribed = new_sequence.transcribe() 
+
+Translate from DNA or RNA to a protein sequence 
+
+        translated = transcribed.translate() 
+        translated = transcribed.translate(to_stop=True) #stop at a stop codon 
+
+Sequences can be manipulated like strings; they are immutable but can be indexed 
         
-#### 
+        combined = seq1 + seq2 
 
 ---
 
