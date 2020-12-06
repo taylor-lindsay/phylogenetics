@@ -234,37 +234,31 @@ Printing this returns an organized summary of the tree
                 Clade(branch_length=0.005646756329113899, name='AB201259.1:1118-2696')
                 Clade(branch_length=0.007011471518987324, name='AB201258.1:1117-2694')
 
-Phylo.write(tree, "tree.xml", "phyloxml")
+#### Like SeqIO and AlignIO, Bio.Phylo uses the commands read(), parse(), write(), convert()
+These commands follow the same format as before: read() only reads one tree in a file, but parse() reads multiple. 
+
+	tree = Phylo.read("tree1.nex", "nexus")
+
+Files can be converted between different file formats:
+- Newick
+- Nexus 
+- NeXML
+- Phyloxml 
+
+	`Phylo.convert("tree.nex", "nexus", "example.xml", "phyloxml")`
 
 
-
-## Tree file formats and uploading data
-
-Inputs to these files can be strings, plaintext files, or gzipped files 
-
-- Newik Files 
-- Nexus Files 
-- NeXML Files  
+Write the new file: 
+	
+	Phylo.write(tree, "tree.xml", "phyloxml")
 
 
-## Making a tree in Python using Bio.pylo ##
-
-`import Bio as bio`
-`from Bio import Phylo`
-`baleen = Phylo.read("baleen2.tre", "newick")`
-`Phylo.draw(baleen)`
 
 ---
 
-# 4. Run statistical analyses
+# 4. Working with 
 
-## Statistics 
-- tree height
-- average branch length
-- patristic distances between nodes 
-- treeness 
-- Gamma statistic 
-- Lineages through time plot 
+
 
 ---
 
