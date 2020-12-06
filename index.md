@@ -25,7 +25,7 @@ The most common place to download sequence data is from [GenBank](https://www.nc
 
 The [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) website is easily navigable once you have determined these details, and will allow you to copy and paste data into a new file, or download sequence data in many different formats. 
 
-## Sequence Data File Formats 
+### Sequence Data File Formats 
 
 - **Raw:** sequence data without any description or other information  
 
@@ -67,7 +67,28 @@ If you are doing a simple analysis, you may wish to skip the sequence allignment
 
 ## Working with sequence data in python 
 
+#### Import the SeqIO module from Bio Python 
+`import Bio as Bio`
+`from Bio import SeqIO`
 
+#### SeqIO.read() reads a single sequence from a file. 
+The first argument is the file and the second is the format. 
+`s1 = SeqIO.read("sequence1.fasta", "fasta")`
+`s2 = SeqIO.read("sequence2.fasta", "fasta")`
+
+#### SeqIO.parse() reads multiple sequences from a file 
+`raw_fasta = SeqIO.parse("whales.fasta", "fasta")`
+`print(list_fasta)`
+
+*return
+`<Bio.SeqIO.FastaIO.FastaIterator object at 0x7ff32df77550>`
+
+However, the easiest way to work with this data is to convert it into a list. From there, you can print and read the 
+`list_fasta = list(SeqIO.parse("whales.fasta", "fasta"))`
+`print(list_fasta)`
+
+*return 
+`[SeqRecord(seq=Seq('ACCAGCTCTAGCCCATACCCTCCACACTTCTACTACCATAAACTAATCAAATAA...CTT'), id='AP006466.1:1122-2698', name='AP006466.1:1122-2698', description='AP006466.1:1122-2698 Balaenoptera bonaerensis mitochondrial DNA, complete genome', dbxrefs=[]), SeqRecord(seq=Seq('AACCAGTATTAGAGCACTGCCTGCCCGGTGACTAATCGTTAAACGGCCGCGGTA...GTT'), id='U13103.1', name='U13103.1', description='U13103.1 Balaenoptera physalus mitochondrion 16S rRNA gene, partial sequence', dbxrefs=[]), SeqRecord(seq=Seq('ACTCCTAGCCTGACT`
 
 ---
 
