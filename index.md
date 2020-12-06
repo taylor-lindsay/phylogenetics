@@ -83,18 +83,10 @@ The first argument is the file and the second is the format.
         raw_fasta = SeqIO.parse("whales.fasta", "fasta")
         print(list_fasta)`
 
-returns: 
-
-        <Bio.SeqIO.FastaIO.FastaIterator object at 0x7ff32df77550>
-
 However, the easiest way to work with this data is to convert it into a list. From there, you can print and read the 
 
         list_fasta = list(SeqIO.parse("whales.fasta", "fasta"))
         print(list_fasta)
-
-returns a compressed list of the sequence data: 
-
-        [SeqRecord(seq=Seq('ACCAGCTCTAGCCCATACCCTCCACACTTCTACTACCATAAACTAATCAAATAA...CTT'), id='AP006466.1:1122-2698', name='AP006466.1:1122-2698',             description='AP006466.1:1122-2698 Balaenoptera bonaerensis mitochondrial DNA, complete genome', dbxrefs=[]),                            SeqRecord(seq=Seq('AACCAGTATTAGAGCACTGCCTGCCCGGTGACTAATCGTTAAACGGCCGCGGTA...GTT'), id='U13103.1', name='U13103.1', description='U13103.1 Balaenoptera   physalus mitochondrion 16S rRNA gene, partial sequence', dbxrefs=[]), SeqRecord(seq=Seq('ACTCCTAGCCTGACT... 
        
 #### Helpful commands for reading and understanding the file
 
@@ -156,7 +148,8 @@ Biopython does have a (module)[https://biopython-tutorial.readthedocs.io/en/late
         import Bio as Bio 
         from Bio import AlignIO
 
-#### AlignIO.read() is used to read single alignments, and AlignIO.parse() is used the same way to read a file with multiple alinments 
+#### AlignIO.read() is used to read single alignments
+AlignIO.parse() is used the same way to read a file with multiple alinments 
 
         align1 = AlignIO.read("whales.aln", "clustal")
         print(aligned)
@@ -166,7 +159,8 @@ To print information on each of the records in an alignment:
         for record in align1:
          print(record)
     
-#### AlignIO.write() can be used to write multiple single alignments into one file (note that this is best supported by the Phylip file format)
+#### AlignIO.write() can be used to write multiple single alignments into one file 
+Note that this is best supported by the Phylip file format
 
         my_alignments = [align1, align2]
         AlignIO.write(my_alignments, "my_example.phy", "phylip")
@@ -180,6 +174,70 @@ To print information on each of the records in an alignment:
 
 # 3. Create Phylogenetic Tree
 
+#### The Bio.pyhlo package has a calculator that allows users to 
+
+        from Bio import Phylo
+        from Bio.Phylo.TreeConstruction import DistanceCalculator 
+
+The distance calculator hosts a large number of different models for the tree construction 
+
+        models= ['identity', 'blastn', 'trans', 'benner6', 'benner22', 'benner74', 'blosum100', 'blosum30', 'blosum35', 'blosum40', 'blosum45', 'blosum50',
+        'blosum55', 'blosum60', 'blosum62', 'blosum65', 'blosum70', 'blosum75', 'blosum80', 'blosum85', 'blosum90', 'blosum95', 'feng', 'fitch', 'genetic', 
+        'gonnet', 'grant', 'ident', 'johnson', 'levin', 'mclach', 'miyata', 'nwsgappep', 'pam120', 'pam180', 'pam250', 'pam30', 'pam300', 'pam60', 'pam90', 
+        'rao', 'risler', 'structure']
+
+For this analysis, we will use the 'identity' model. 
+
+        distance_matrix = calculator.get_distance(alignment)
+        print(distance_matrix)
+
+The distance matrix looks something like this: 
+
+        MF409242.1:1114-2689	0
+        AB481392.1	0.531012658227848	0
+        AB481394.1	0.530379746835443	0.02468354430379749	0
+        AP006466.1:1122-2698	0.060126582278481	0.5341772151898734	0.5335443037974683	0
+        AB481389.1	0.5322784810126582	0.02468354430379749	0.027848101265822822	0.519620253164557	0
+        U13103.1	0.6816455696202532	0.19493670886075953	0.19873417721518982	0.679113924050633	0.1936708860759494	0
+        AP006470.1:1118-2696	0.042405063291139244	0.5272151898734176	0.5278481012658227	0.04556962025316458	0.5291139240506328	0.6784810126582279	0
+        AB201259.1:1118-2696	0.04303797468354431	0.5291139240506328	0.5297468354430379	0.046202531645569644	0.5265822784810126	0.6784810126582279	0.015189873417721489	0
+        AB201258.1:1117-2694	0.04493670886075951	0.5284810126582278	0.530379746835443	0.04303797468354431	0.5272151898734176	0.6784810126582279	0.017721518987341756	0.012658227848101222	0
+	MF409242.1:1114-2689	AB481392.1	AB481394.1	AP006466.1:1122-2698	AB481389.1	U13103.1	AP006470.1:1118-2696	AB201259.1:1118-2696	AB201258.1:1117-2694
+
+Next, we need to construct the tree using a second module in the tree construction package
+
+        from Bio.Phylo.TreeConstruction import DistanceTreeConstructor
+        constructor = DistanceTreeConstructor(calculator)
+
+Once we create the object, we can then build the tree 
+
+        tree = constructor.build_tree(alignment)
+        print(tree)
+
+Printing this returns an organized summary of the tree
+
+        Tree(rooted=True)
+           Clade(branch_length=0, name='Inner7')
+              Clade(branch_length=0.0021657436708860875, name='Inner6')
+               Clade(branch_length=0.00881131329113926, name='Inner5')
+                    Clade(branch_length=0.026331751054852318, name='MF409242.1:1114-2689')
+                        Clade(branch_length=0.005551160337552749, name='Inner4')
+                          Clade(branch_length=0.023753955696202533, name='AP006466.1:1122-2698')
+                          Clade(branch_length=0.48154667721518984, name='Inner3')
+                             Clade(branch_length=0.17295886075949374, name='U13103.1')
+                           Clade(branch_length=0.009161392405063223, name='Inner2')
+                                    Clade(branch_length=0.011524261603375524, name='AB481389.1')
+                                Clade(branch_length=0.002399789029535887, name='Inner1')
+                                        Clade(branch_length=0.012974683544303811, name='AB481394.1')
+                                        Clade(branch_length=0.011708860759493678, name='AB481392.1')
+                Clade(branch_length=0.007960838607594924, name='AP006470.1:1118-2696')
+                Clade(branch_length=0.005646756329113899, name='AB201259.1:1118-2696')
+                Clade(branch_length=0.007011471518987324, name='AB201258.1:1117-2694')
+
+Phylo.write(tree, "tree.xml", "phyloxml")
+
+
+
 ## Tree file formats and uploading data
 
 Inputs to these files can be strings, plaintext files, or gzipped files 
@@ -188,11 +246,6 @@ Inputs to these files can be strings, plaintext files, or gzipped files
 - Nexus Files 
 - NeXML Files  
 
-## Parts of a phylogenetic tree 
-- Root 
-- Node 
-
-## Types of Trees 
 
 ## Making a tree in Python using Bio.pylo ##
 
