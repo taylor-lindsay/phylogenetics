@@ -65,7 +65,8 @@ If you are doing a simple analysis, you may wish to skip the sequence allignment
 3. [Treebase](https://www.treebase.org/)
 4. [Phylome DB](http://phylomedb.org/)
 
-## Working with sequence data in python 
+## Working with sequence data in BioPython 
+BioPython has a module called SeqIO, which allows the user to manipulate, read, and write sequence files. The main functions for this and the following modules are `read()`, `parse()`, `write()` and `convert()`. 
 
 #### Import the SeqIO module from Bio Python 
         import Bio as Bio
