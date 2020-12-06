@@ -68,9 +68,8 @@ If you are doing a simple analysis, you may wish to skip the sequence allignment
 ## Working with sequence data in python 
 
 #### Import the SeqIO module from Bio Python 
-`import Bio as Bio`
-
-`from Bio import SeqIO`
+        import Bio as Bio
+        from Bio import SeqIO
 
 #### SeqIO.read() reads a single sequence from a file. 
 
