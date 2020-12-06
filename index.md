@@ -9,6 +9,7 @@ There are currently multiple packages that allow users to work with sequence dat
 Each of these packages have different strengths at different steps in the process of creating and visualizing a phylogenetic tree. Here, we will use BioPython because it is the only package that allows us to work through the process from initial sequence data to a simple visualization of the tree. 
 
 ## Steps to creating phylogenetic trees 
+
 1. **Download and work with sequence data
 2. **Align sequence data and work with alignments 
 3. **Working with tree data 
@@ -16,21 +17,25 @@ Each of these packages have different strengths at different steps in the proces
 5. **Run Statistical Analyses 
 
 # 1. Downloading and Working with Sequence Data 
+
 The most common place to download sequence data is from [GenBank](https://www.ncbi.nlm.nih.gov/genbank/), a federally funded database with all publically available partial or whole genome sequences. To download data from this website, you must first determine the following details for your analysis:
 - Which species 
 - What part of the genome (eg. 16s, ...)
 - What file format 
 
 The [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) website is easily navigable once you have determined these details, and will allow you to copy and paste data into a new file, or download sequence data in many different formats. 
+
 ## Sequence Data File Formats 
 
 - **Raw:** sequence data without any description or other information  
 
 `ttcctctttctcgactccatcttcgcggtagctgggaccgccgttcagtcgc`
+
 - **FASTA:** The most commonly used format, and the one we will use for this tutorial, the first line of each sequence starts with `>` and includes an ID code and other information
 
 `>ID_code some other comment
 ttcctctttctcgactccatcttcgcggtagct`
+
 - **GenBank:** contains lots of detailed information about the sequence. 
 
 `LOCUS       DQ078310                1250 bp    mRNA    linear   INV 26-JUL-2016
@@ -44,20 +49,24 @@ ORIGIN
 ...`
 
 - Other popular data formats can be found [here](http://emboss.sourceforge.net/docs/themes/SequenceFormats.html). 
+
 ### Identifying sequence data 
 
-If you already have sequence data an you wish to figure out what species or part of the genome it belongs to, you can use BLAST to locate it. 
+If you already have sequence data and you wish to figure out what species or part of the genome it belongs to, you can use BLAST to locate it. 
 The BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) allows users to search for sequences in a database containing all open-access sequences. 
 There is also a Biopython (package)[https://biopython.org/docs/1.75/api/Bio.Blast.html] to use BLAST. 
 
 ### Downloading pre-made trees
-If you are doing a simple analysis, you may wish to skip the sequence allignment process, and simply use trees that are already published in the scientific community. To do this, you can download one of the file types discussed in the "Tree file formats and uploading data" section below. This type of data can be downloaded from websites such as the following: 
+
+If you are doing a simple analysis, you may wish to skip the sequence allignment process, and simply use trees that are already available open-source platforms or with published in a journal article. To do this, you can download one of the file types discussed in the "Tree file formats and uploading data" section below. This type of data can be downloaded from websites such as the following: 
+
 1. [Interactive Tree of Life](https://itol.embl.de/)
 2. [Open Tree of Life](https://tree.opentreeoflife.org/)
 3. [Treebase](https://www.treebase.org/)
 4. [Phylome DB](http://phylomedb.org/)
 
 ## Working with sequence data in python 
+
 
 
 ---
