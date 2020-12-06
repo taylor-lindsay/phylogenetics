@@ -1,11 +1,17 @@
 This tutorial will walk you through the steps of creating a phylogenetic tree using Jupyter Notebook, with Python as a programing language. These concepts can be utilized at the command line, however this tutorial is intended to be introductory, and is better visualized and conceptualized in Jupyter Notebook. 
 ### Steps to creating phylogenetic trees 
-1. Download Sequence Data
+1. Download Sequence Data and working with it in python
 2. Align Sequence Data
 3. Create Phylogenetic Tree
 4. Run Statistical Analyses 
 
-# 1. Downloading Sequence Data 
+There are currently multiple packages that allow users to work with sequence data and create phylogenetic trees 
+- **Bio.Phylo:** For this tutorial, we will use BioPhylo 
+- **TreeSwift:** The newest of these packages, Treeswift is designed to handle large datasets much more quickly than the others. Treeswift 
+- **DendroPy:** 
+- **ETE Toolkit:**
+
+# 1. Downloading and Working with Sequence Data 
 The most common place to download sequence data is from GenBank (https://www.ncbi.nlm.nih.gov/genbank/), a federally funded database with all publically available partial or whole genome sequences. To download data from this website, you must first determine the following details for your analysis:
 - Which species 
 - What part of the genome (eg. 16s, ...)
@@ -34,6 +40,11 @@ ORIGIN
 ...`
 
 - Other popular data formats can be found [here](http://emboss.sourceforge.net/docs/themes/SequenceFormats.html). 
+### Identifying sequence data 
+
+If you already have sequence data an you wish to figure out what species or part of the genome it belongs to, you can use BLAST to locate it. 
+The BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) allows users to search for sequences in a database containing all open-access sequences. 
+There is also a Biopython (package)[https://biopython.org/docs/1.75/api/Bio.Blast.html] to use BLAST. 
 
 ### Downloading pre-made trees
 If you are doing a simple analysis, you may wish to skip the sequence allignment process, and simply use trees that are already published in the scientific community. To do this, you can download one of the file types discussed in the "Tree file formats and uploading data" section below. This type of data can be downloaded from websites such as the following: 
@@ -42,14 +53,13 @@ If you are doing a simple analysis, you may wish to skip the sequence allignment
 3. [Treebase](https://www.treebase.org/)
 4. [Phylome DB](http://phylomedb.org/)
 
+## Working with sequence data in python 
+
+
 ---
 
 # 2. Aligning Sequence Data 
-There are currently multiple packages that allow users to work with sequence data and create phylogenetic trees 
-- **Bio.Phylo:** For this tutorial, we will use BioPhylo 
-- **TreeSwift:** The newest of these packages, Treeswift is designed to handle large datasets much more quickly than the others. Treeswift 
-- **DendroPy:**
-- **ETE Toolkit:**
+
 
 ---
 
