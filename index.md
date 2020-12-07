@@ -30,7 +30,7 @@ This tutorial uses a number of different resources, in and outside of BioPython.
 
 # 1. Downloading and Working with Sequence Data 
 
-The most common place to download sequence data is from [GenBank](https://www.ncbi.nlm.nih.gov/genbank/), a federally funded database with all publically available partial or whole genome sequences. To download data from this website, you must first determine the following details for your analysis:
+The most common place to download sequence data is from [GenBank](https://www.ncbi.nlm.nih.gov/genbank/), a federally funded database with all publically available partial or whole genome sequences. To download data from this website, you must first determine the following details for your analysis
 - Which species 
 - What part of the genome (eg. 16s, ...)
 - What file format 
@@ -48,7 +48,7 @@ The [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) website is easily navigable
         >ID_code some other comment
         ttcctctttctcgactccatcttcgcggtagct
 
-- **GenBank:** contains lots of detailed information about the sequence. 
+- **GenBank:** contains lots of detailed information about the sequence
 
         LOCUS       DQ078310                1250 bp    mRNA    linear   INV 26-JUL-2016
         DEFINITION  Littorina littorea p38 MAPK mRNA, partial cds.
@@ -84,8 +84,8 @@ BioPython has a module called SeqIO, which allows the user to manipulate, read, 
         import Bio as Bio
         from Bio import SeqIO
 
-#### SeqIO.read() reads a single sequence from a file. 
-The first argument is the file and the second is the format. 
+#### SeqIO.read() reads a single sequence from a file
+The first argument is the file and the second is the format 
 
         s1 = SeqIO.read("sequence1.fasta", "fasta")
         s2 = SeqIO.read("sequence2.fasta", "fasta")
@@ -95,19 +95,19 @@ The first argument is the file and the second is the format.
         raw_fasta = SeqIO.parse("whales.fasta", "fasta")
         print(list_fasta)`
 
-However, the easiest way to work with this data is to convert it into a list. From there, you can print and read the 
+However, the easiest way to work with this data is to convert it into a list. From there, you can print and read each sequence and it's detials. 
 
         list_fasta = list(SeqIO.parse("whales.fasta", "fasta"))
         print(list_fasta)
        
 #### Helpful commands for reading and understanding the file
 
-To print a list of all the IDs in a fasta file:
+To print a list of all the IDs in a fasta file
 
         for record in SeqIO.parse("sequences.fasta", "fasta"):
           print(record.id)
         
-To find out the current ID of a sequence: 
+To find out the current ID of a sequence
 
         print(s1.id)
         
@@ -115,13 +115,13 @@ To read the full description on your fasta file
 
         print(s1.description)
         
-To change an ID name: 
+To change an ID name
 
         s1.id = 'Balaenoptera acutorostrata'
       
       
-#### SeqIO.write() is used to write a new file from one or more existing sequences. 
-This step should also be used if the id names were edited in python and need to be saved to a file. 
+#### SeqIO.write() is used to write a new file from one or more existing sequences
+This step should also be used if the id names were edited in python and need to be saved to a file
 
         SeqIO.write([s1, s2], "sequences.fasta", "fasta")
 
@@ -129,7 +129,7 @@ This step should also be used if the id names were edited in python and need to 
 
         SeqIO.convert("sequence1.fasta", "fasta", "new_sequence.fastq", "fastq")
         
-#### Other functions in SeqIO that we don't need here: 
+#### Other helpful functions in SeqIO that we don't need for this analysis 
 Write a sequence by hand 
 
         new_sequence = Seq("AAGGAACTG", generic_dna)
@@ -167,7 +167,7 @@ AlignIO.parse() is used the same way to read a file with multiple alinments
     	alignment = AlignIO.read(aln,"clustal")
     print(type(alignment))
 
-To print information on each of the records in an alignment: 
+To print information on each of the records in an alignment
 
         for record in align1:
          print(record)
@@ -199,12 +199,12 @@ The distance calculator hosts a large number of different models for the tree co
         'gonnet', 'grant', 'ident', 'johnson', 'levin', 'mclach', 'miyata', 'nwsgappep', 'pam120', 'pam180', 'pam250', 'pam30', 'pam300', 'pam60', 'pam90', 
         'rao', 'risler', 'structure']
 
-For this analysis, we will use the 'identity' model. 
+For this analysis, we will use the 'identity' model
 
         distance_matrix = calculator.get_distance(alignment)
         print(distance_matrix)
 
-The distance matrix looks something like this: 
+The distance matrix looks something like this
 
         MF409242.1:1114-2689	0
         AB481392.1	0.531012658227848	0
@@ -248,11 +248,11 @@ Printing this returns an organized summary of the tree
                 Clade(branch_length=0.007011471518987324, name='AB201258.1:1117-2694')
 
 #### Like SeqIO and AlignIO, Bio.Phylo uses the commands read(), parse(), write(), convert()
-These commands follow the same format as before: read() only reads one tree in a file, but parse() reads multiple. 
+These commands follow the same format as before: read() only reads one tree in a file, but parse() reads multiple
 
 	tree = Phylo.read("tree1.nex", "nexus")
 
-Files can be converted between different file formats:
+Files can be converted between different file formats
 
 	Phylo.convert("tree.nex", "nexus", "example.xml", "phyloxml")
 
@@ -261,7 +261,7 @@ Files can be converted between different file formats:
 - NeXML
 - Phyloxml 
 
-Write the new file: 
+Write the new file
 	
 	Phylo.write(tree, "tree.xml", "phyloxml")
 
@@ -274,7 +274,7 @@ The following commands can be used to look at the nodes and leaves of your tree
 
 # 4. Creating Phylogenetic Tree Figures
 
-Bio.Phylo works directly with [matplotlib](https://matplotlib.org/) and [pyplot](https://matplotlib.org/api/pyplot_api.html) to draw trees. 
+Bio.Phylo works directly with [matplotlib](https://matplotlib.org/) and [pyplot](https://matplotlib.org/api/pyplot_api.html) to draw trees
 
 	import matplotlib
 	import matplotlib.pyplot as plt
@@ -283,11 +283,25 @@ To draw a simple, base tree you can use the simple command Phylo.draw()
 
 	fig = Phylo.draw(turtle_tree)
 	
-You can also use Phylo.draw_
-
 However, depending on the size of the tree, this may not be easy to read
 
 <img src="turtles/turtles_simple.png">
+
+You can also use Phylo.draw_ascii(tree) to quickly view the tree 
+
+	         ___________ Flatback
+	       _|
+	      | |_________________ Leatherback
+	  ____|
+	 |    |                           __________________________ Green
+	 |    |__________________________|
+	 |                               |________________________________ Olive
+	 |
+	_|________ Hawksbill
+	 |
+	 |_______ Loggerhead
+	 |
+	 |____ Kemp’s
 
 Here is an example of code in MatPlotLib that cleans up the cladogram 
 
