@@ -151,8 +151,9 @@ Biopython does have a (module)[https://biopython-tutorial.readthedocs.io/en/late
 #### AlignIO.read() is used to read single alignments
 AlignIO.parse() is used the same way to read a file with multiple alinments 
 
-        align1 = AlignIO.read("whales.aln", "clustal")
-        print(aligned)
+    with open("whales.aln","r") as aln: 
+    	alignment = AlignIO.read(aln,"clustal")
+    print(type(alignment))
 
 To print information on each of the records in an alignment: 
 
