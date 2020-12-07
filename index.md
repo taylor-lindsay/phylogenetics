@@ -330,12 +330,14 @@ The ocean of phylogenetics is vast and constantly expanding, but hopefully this 
 
 # Sources
 1. [Tree of life image](https://www.researchgate.net/figure/Phylogenetic-tree-of-the-Animal-kingdom-2_fig1_314095464)
-2. http://emboss.sourceforge.net/docs/themes/SequenceFormats.html
-3. https://medium.com/@wvsharber/introduction-to-genbank-and-bioinformatics-with-python-8a25a0f15e3f
-4. https://towardsdatascience.com/introduction-to-sequence-alignments-with-biopython-f3b6375095db
-5. https://biopython.org/wiki/Phylo_cookbook
-6. https://tree.opentreeoflife.org/opentree/opentree12.3@mrcaott800329ott800331/Balaenoptera-borealis--Balaenoptera-brydei
-7. https://github.com/peterjc/biopython_workshop/blob/master/reading_writing_alignments/README.rst
+2. [Emboss page on Sequence Formats](http://emboss.sourceforge.net/docs/themes/SequenceFormats.html)
+3. [Introduction to GenBank and Bioinformatics with Python](https://medium.com/@wvsharber/introduction-to-genbank-and-bioinformatics-with-python-8a25a0f15e3f)
+4. [Introduction to Sequence Alignments with Biopython](https://towardsdatascience.com/introduction-to-sequence-alignments-with-biopython-f3b6375095db)
+5. [Many pages from the BioPython cookbook](https://biopython.org/)
+6. [Open tree of life](https://tree.opentreeoflife.org/opentree/argus/opentree12.3@ott93302)
+7. [BioPython Workshop](https://github.com/peterjc/biopython_workshop/blob/master/reading_writing_alignments/README.rst)
+8. [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) 
+9. [Video Tutorials of Sequence Analysis](https://www.youtube.com/watch?v=qQ7rIpB4oOw&ab_channel=CarlosG.Oliver) and [Tree Hanlding](https://www.youtube.com/watch?v=fQ_GWmp9-y8&ab_channel=CarlosG.Oliver) 
 
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
