@@ -13,9 +13,10 @@ Each of these packages have different strengths at different steps in the proces
 1. Download and work with sequence data
 2. Align sequence data and work with alignments
 3. Working with tree data
-4. Creating phylogenetic trees
+4. Creating phylogenetic tree figures
 
 This tutorial uses a number of different resources, in and outside of BioPython. Below is a flow chart showing which resources are used in which steps of the process. 
+
 <img src="images/flow.png">
 
 # 1. Downloading and Working with Sequence Data 
@@ -262,7 +263,20 @@ The following commands can be used to look at the nodes and leaves of your tree
 
 ---
 
-# 4. Working with 
+# 4. Creating Phylogenetic Tree Figures
+
+Bio.Phylo works directly with (matplotlib)[https://matplotlib.org/] and (pyplot)[https://matplotlib.org/api/pyplot_api.html] to draw trees. 
+
+	import matplotlib
+	import matplotlib.pyplot as plt
+
+To draw a simple, base tree you can use the simple command Phylo.draw()
+
+	fig = Phylo.draw(turtle_tree)
+	
+
+
+However, depending on the size of the tree, this may not be easy to read
 
 
 
