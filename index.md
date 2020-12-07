@@ -15,8 +15,7 @@ Each of these packages have different strengths at different steps in the proces
 3. Working with tree data
 4. Creating phylogenetic trees
 
-
-
+<img src="images/flow.png">
 
 # 1. Downloading and Working with Sequence Data 
 
