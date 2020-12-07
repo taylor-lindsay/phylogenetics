@@ -14,7 +14,9 @@ Each of these packages have different strengths at different steps in the proces
 2. Align sequence data and work with alignments
 3. Working with tree data
 4. Creating phylogenetic trees
-5. Run Statistical Analyses
+
+
+
 
 # 1. Downloading and Working with Sequence Data 
 
