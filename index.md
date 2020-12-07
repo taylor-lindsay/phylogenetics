@@ -306,7 +306,11 @@ Here is an example of code in MatPlotLib that cleans up the cladogram
 
 # Conclusion
 
-There are a number of functions provided in BioPython and other Python packages that are not explored here. For a scientific publiction, the 
+There are a number of functions provided in BioPython and other Python packages that are not explored here. For a scientific publiction, the tree file would normally be exported and formatted to be more professional in annother program such as the [ETE toolkit](http://etetoolkit.org/) or [Figtree](http://tree.bio.ed.ac.uk/software/figtree/). 
+
+This tutorial also does not explore [consensus trees, bootstrapping](https://biopython.org/docs/1.75/api/Bio.Phylo.Consensus.html) or statistical analyses in phylogenetics (which are not supported in BioPython, but can be done in [TreeSwift](https://pypi.org/project/treeswift/) or [DendroPy](https://dendropy.org/primer/treestats.html). 
+
+The ocean of phylogenetics is vast and constantly expanding, but hopefully this tutorial allowed you to dip your toes in! 
 
 ---
 
