@@ -15,6 +15,7 @@ Each of these packages have different strengths at different steps in the proces
 3. Working with tree data
 4. Creating phylogenetic trees
 
+This tutorial uses a number of different resources, in and outside of BioPython. Below is a flow chart showing which resources are used in which steps of the process. 
 <img src="images/flow.png">
 
 # 1. Downloading and Working with Sequence Data 
