@@ -240,19 +240,22 @@ These commands follow the same format as before: read() only reads one tree in a
 	tree = Phylo.read("tree1.nex", "nexus")
 
 Files can be converted between different file formats:
+
+	Phylo.convert("tree.nex", "nexus", "example.xml", "phyloxml")
+
 - Newick
 - Nexus 
 - NeXML
 - Phyloxml 
 
-	`Phylo.convert("tree.nex", "nexus", "example.xml", "phyloxml")`
-
-
 Write the new file: 
 	
 	Phylo.write(tree, "tree.xml", "phyloxml")
 
+The following commands can be used to look at the nodes and leaves of your tree
 
+	tree.get_nonterminals()
+	tree.get_terminals()
 
 ---
 
