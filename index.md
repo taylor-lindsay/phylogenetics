@@ -153,7 +153,7 @@ Sequences can be manipulated like strings; they are immutable but can be indexed
 
 #### Creating alignments
 The easiest way to create an alignment is to use the very popular tool [MUSCLE](https://www.ebi.ac.uk/Tools/msa/muscle/ ). 
-Biopython does have a ([module](https://biopython-tutorial.readthedocs.io/en/latest/notebooks/06%20-%20Multiple%20Sequence%20Alignment%20objects.html]) to run MUSCLE at the command line, but it seems to need some updating as it was written for Python 2, and is generally much more complicated than using the online MUSCLE interface. 
+Biopython does have a [module](https://biopython-tutorial.readthedocs.io/en/latest/notebooks/06%20-%20Multiple%20Sequence%20Alignment%20objects.html]) to run MUSCLE at the command line, but it seems to need some updating as it was written for Python 2, and is generally much more complicated than using the online MUSCLE interface. 
 
 #### AlignIO is a module in BioPython that works with Alignment files 
 
@@ -187,7 +187,7 @@ Note that this is best supported by the Phylip file format
 
 # 3. Create Phylogenetic Tree Datasets 
 
-#### The Bio.pyhlo package has a calculator that allows users to 
+#### The Bio.pyhlo package has a calculator that allows users to calculate their own trees based on a variety of models
 
         from Bio import Phylo
         from Bio.Phylo.TreeConstruction import DistanceCalculator 
@@ -274,7 +274,7 @@ The following commands can be used to look at the nodes and leaves of your tree
 
 # 4. Creating Phylogenetic Tree Figures
 
-Bio.Phylo works directly with (matplotlib)[https://matplotlib.org/] and (pyplot)[https://matplotlib.org/api/pyplot_api.html] to draw trees. 
+Bio.Phylo works directly with [matplotlib](https://matplotlib.org/) and [pyplot](https://matplotlib.org/api/pyplot_api.html) to draw trees. 
 
 	import matplotlib
 	import matplotlib.pyplot as plt
@@ -283,6 +283,8 @@ To draw a simple, base tree you can use the simple command Phylo.draw()
 
 	fig = Phylo.draw(turtle_tree)
 	
+You can also use Phylo.draw_
+
 However, depending on the size of the tree, this may not be easy to read
 
 <img src="turtles/turtles_simple.png">
@@ -299,6 +301,12 @@ Here is an example of code in MatPlotLib that cleans up the cladogram
 	fig.savefig("turtles_cladogram")
 
 <img src="turtles/turtles_cladogram.png">
+
+---
+
+# Conclusion
+
+There are a number of functions provided in BioPython and other Python packages that are not explored here. For a scientific publiction, the 
 
 ---
 
