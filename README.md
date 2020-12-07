@@ -5,4 +5,5 @@ This repository contains a tutorial and examples of creating phylogenetic trees 
 1. The full tutorial is available in a [web page](https://taylor-lindsay.github.io/phylogenetics/). 
 2. Example in a jupyter notebook - see the turtles folder for the turtles.ipynb file
 3. Example in a python file  - see the sharks folder for the sharks.py file 
-4. Tutorial in a youtube video. 
+4. Large tree example in a jupyter notebook - see the coral folder for the coral.ipynb file 
+5. Tutorial in a youtube video. 
