@@ -152,8 +152,8 @@ Sequences can be manipulated like strings; they are immutable but can be indexed
 # 2. Aligning Sequence Data 
 
 #### Creating alignments
-The easiest way to create an alignment is to use the very popular tool (MUSCLE)[https://www.ebi.ac.uk/Tools/msa/muscle/ ]. 
-Biopython does have a (module)[https://biopython-tutorial.readthedocs.io/en/latest/notebooks/06%20-%20Multiple%20Sequence%20Alignment%20objects.html] to run MUSCLE at the command line, but it seems to need some updating as it was written for Python 2, and is generally much more complicated than using the online MUSCLE interface. 
+The easiest way to create an alignment is to use the very popular tool [MUSCLE](https://www.ebi.ac.uk/Tools/msa/muscle/ ). 
+Biopython does have a ([module](https://biopython-tutorial.readthedocs.io/en/latest/notebooks/06%20-%20Multiple%20Sequence%20Alignment%20objects.html]) to run MUSCLE at the command line, but it seems to need some updating as it was written for Python 2, and is generally much more complicated than using the online MUSCLE interface. 
 
 #### AlignIO is a module in BioPython that works with Alignment files 
 
