@@ -338,6 +338,7 @@ The ocean of phylogenetics is vast and constantly expanding, but hopefully this 
 7. [BioPython Workshop](https://github.com/peterjc/biopython_workshop/blob/master/reading_writing_alignments/README.rst)
 8. [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) 
 9. [Video Tutorials of Sequence Analysis](https://www.youtube.com/watch?v=qQ7rIpB4oOw&ab_channel=CarlosG.Oliver) and [Tree Hanlding](https://www.youtube.com/watch?v=fQ_GWmp9-y8&ab_channel=CarlosG.Oliver) 
+10. [Data from Huang & Roy 2015](https://royalsocietypublishing.org/doi/10.1098/rstb.2014.0010)
 
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
