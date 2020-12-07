@@ -1,0 +1,8 @@
+#NEXUS
+Begin Taxa;
+ Dimensions NTax=7;
+ TaxLabels Flatback Leatherback Green Olive Hawksbill Loggerhead Kemp’s;
+End;
+Begin Trees;
+ Tree tree1=((((Flatback:0.02595,Leatherback:0.03676)Inner2:0.00501,(Green:0.05729,Olive:0.06814)Inner1:0.05812)Inner3:0.01102,Hawksbill:0.02013)Inner4:0.00021,Loggerhead:0.01843,Kemp’s:0.01208)Inner5:0.00000;
+End;
