@@ -1,4 +1,9 @@
-This tutorial will walk you through the steps of creating a phylogenetic tree using Jupyter Notebook, with Python as a programing language. These concepts can be utilized at the command line, however this tutorial is intended to be introductory, and is better visualized and conceptualized in Jupyter Notebook. 
+
+#### This tutorial will walk you through the steps of creating a phylogenetic tree using Jupyter Notebook, with Python as a programing language. These concepts can be utilized at the command line, however this tutorial is intended to be introductory, and is better visualized and conceptualized in Jupyter Notebook. 
+
+---
+
+# Python packages for working with phylogenetic data 
 
 There are currently multiple packages that allow users to work with sequence data and create phylogenetic trees in python: 
 - [BioPython:](https://biopython.org/) BioPython has many modules that allow the user to work with a variety of data types including sequence data, alignment files, and tree files and has the capacity create phylogenetic tree diagrams using [matplotlib.](https://matplotlib.org/)
@@ -8,7 +13,9 @@ There are currently multiple packages that allow users to work with sequence dat
 
 Each of these packages have different strengths at different steps in the process of creating and visualizing a phylogenetic tree. Here, we will use BioPython because it is the only package that allows us to work through the process from initial sequence data to a simple visualization of the tree. 
 
-## Steps to creating phylogenetic trees 
+---
+
+# Steps to creating phylogenetic trees 
 
 1. Download and work with sequence data
 2. Align sequence data and work with alignments
@@ -18,6 +25,8 @@ Each of these packages have different strengths at different steps in the proces
 This tutorial uses a number of different resources, in and outside of BioPython. Below is a flow chart showing which resources are used in which steps of the process. 
 
 <img src="images/flow.png">
+
+---
 
 # 1. Downloading and Working with Sequence Data 
 
@@ -68,7 +77,7 @@ If you are doing a simple analysis, you may wish to skip the sequence allignment
 3. [Treebase](https://www.treebase.org/)
 4. [Phylome DB](http://phylomedb.org/)
 
-## Working with sequence data in BioPython 
+### Working with sequence data in BioPython 
 BioPython has a module called SeqIO, which allows the user to manipulate, read, and write sequence files. The main functions for this and the following modules are `read()`, `parse()`, `write()` and `convert()`. 
 
 #### Import the SeqIO module from Bio Python 
@@ -176,7 +185,7 @@ Note that this is best supported by the Phylip file format
 
 ---
 
-# 3. Create Phylogenetic Tree
+# 3. Create Phylogenetic Tree Datasets 
 
 #### The Bio.pyhlo package has a calculator that allows users to 
 
@@ -274,11 +283,22 @@ To draw a simple, base tree you can use the simple command Phylo.draw()
 
 	fig = Phylo.draw(turtle_tree)
 	
-
-
 However, depending on the size of the tree, this may not be easy to read
 
+<img src="turtles/turtles_simple.png">
 
+Here is an example of code in MatPlotLib that cleans up the cladogram 
+
+	fig = plt.figure(figsize=(13, 5), dpi=100) # create figure & set the size 
+	matplotlib.rc('font', size=12)             # fontsize of the leaf and node labels 
+	matplotlib.rc('xtick', labelsize=10)       # fontsize of the tick labels
+	matplotlib.rc('ytick', labelsize=10)       # fontsize of the tick labels
+	#turtle_tree.ladderize()		   # optional way to reformat your tree 
+	axes = fig.add_subplot(1, 1, 1)
+	Phylo.draw(turtle_tree, axes=axes)
+	fig.savefig("turtles_cladogram")
+
+<img src="turtles/turtles_cladogram.png">
 
 ---
 
